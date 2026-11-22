@@ -556,8 +556,7 @@ document.addEventListener("keydown",e=>{if(e.key==="Escape")close()});
 function openDonor(k){
   const d=donors[k], s=d.photo?SHAPES[0]:SHAPES[k%SHAPES.length], c=PALETTE[(k*3)%PALETTE.length];
   open(`<div class="big">${bauble(k,d)}</div>
-    <div class="meta">Bauble ${k+1} · ${c.n} ${s.n}</div>
-    <h3>Thank you, ${esc(d.name)}</h3>
+    <h3 style="margin-top:8px">Thank you, ${esc(d.name)}</h3>
     ${d.message?`<blockquote style="margin-top:14px">“${esc(d.message)}”</blockquote>`:`<p style="margin-top:12px">Your kindness is part of what makes this tree glow.</p>`}
     <p style="margin-top:18px">Go raibh míle maith agat — a thousand thanks.</p>`);
 }
